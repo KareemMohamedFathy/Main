@@ -5,11 +5,12 @@ import App from '../../App';
 import AppreciationAwardHeader from '../../components/AppreciationAwardHeader/AppreciationAwardHeader';
 import {Image, Text} from 'react-native';
 import AppreciationDetails from '../../Screens/AppreciationDetails/AppreciationDetails';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const MainStack = createNativeStackNavigator();
 const Tab = createMaterialTopTabNavigator();
 const TabNavigator = () => (
-  <>
+  <SafeAreaView style={{flex: 1}}>
     <AppreciationAwardHeader />
     <Tab.Navigator
       screenOptions={{
@@ -51,7 +52,7 @@ const TabNavigator = () => (
         }}
       />
     </Tab.Navigator>
-  </>
+  </SafeAreaView>
 );
 
 const Main = () => {
